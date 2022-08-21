@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import app from './App.module.css';
 import {Counter} from "./Counter/Counter";
+import {ChangeCounter} from "./ChangeCounter/ChangeCounter";
 
 function App() {
 
@@ -13,13 +14,9 @@ function App() {
   return (
     <div className={app.wrapper}>
     <Counter value={value}
-             setValue={setValue}
+             setValue={setValue}/>
 
-    />
-
-
-
-
+    <ChangeCounter/>
     </div>
   );
 }
