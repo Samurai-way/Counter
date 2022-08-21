@@ -1,14 +1,28 @@
 import React from 'react';
 import u from "./Button.module.css";
 
-export const UniversalButton = () => {
+type UniversalButtonPropsType = {
+    setValue: (value: number) => void
+    value: number
+}
+
+export const UniversalButton = (props: UniversalButtonPropsType) => {
+
+    const onClickButtonInc = () => {
+        props.setValue(props.value + 1)
+    }
+
+    const onClickButtonDec = () => {
+        props.setValue(0)
+    }
+
     return (
         <div className={u.wrapper}>
             <div>
-                <button className={u.inc}>inc</button>
+                <button onClick={onClickButtonInc} className={u.inc}>inc</button>
             </div>
             <div>
-                <button className={u.dec}>dec</button>
+                <button onClick={onClickButtonDec} className={u.dec}>dec</button>
             </div>
         </div>
     );
