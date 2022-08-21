@@ -17,7 +17,7 @@
 .counter_small{
     border: 3px solid hotpink;
     width:335px;
-    height: 120px;
+    height: 135px;
     margin: 10px 10px 10px 15px;
     border-radius: 10px;
 }
@@ -29,4 +29,32 @@
     margin: 150px 0px -365px 240px;
     display: inline-block;
     border-radius: 20px;
+}
+.button_wrapper{
+    border: 3px solid hotpink;
+    width: 350px;
+    height: 70px;
+    margin: 15px 10px 10px 7px;
+    border-radius: 20px;
+    display: flex;
+}
+.value{
+    font-size: 70px;
+    margin: 20px 10px 10px 135px;
+}
+.inc{
+    margin: 20px 140px 10px 50px;
+}
+.dec{
+    margin: 5px 140px 10px 10px;
+}
+.inc_button{
+    font-size: 45px;
+    border-radius: 10px;
+    background-color: cyan;
+}
+.dec_button{
+    font-size: 45px;
+    border-radius: 10px;
+    background-color: cyan;
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import a from "../../App.module.css";
+
 // import a from "../App.module.css";
 // import {PropsType} from "./Component";
 //
@@ -35,3 +37,16 @@ import React from 'react';
 //         </div>
 //     );
 // }
+
+export const UniversalButton = () => {
+    return(
+        <div className={a.button_wrapper}>
+            <div className={a.inc}>
+                <button className={a.inc_button}>inc</button>
+            </div>
+            <div className={a.dec}>
+                <button className={a.dec_button}>dec</button>
+            </div>
+        </div>
+    );
+}
