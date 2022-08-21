@@ -1,18 +1,16 @@
-import React, {useState} from 'react';
-import a from './App.module.css';
-import {Counter} from "./components/Counter/Counter";
-import {CounterTable} from "./components/Counter_table/Counter_table";
-
+import React from 'react';
+import app from './App.module.css';
+import {Counter} from "./Counter/Counter";
 
 
 function App() {
-
-    let [value, setValue]=useState<number>(0)
-
   return (
-    <div className={a.wrapper}>
-        <CounterTable/>
-        <Counter value={value} setValue={setValue}/>
+    <div className={app.wrapper}>
+    <Counter/>
+
+
+
+
     </div>
   );
 }
