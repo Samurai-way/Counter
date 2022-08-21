@@ -24,6 +24,9 @@ export const UniversalButton = (props: UniversalButtonPropsType) => {
             <div>
                 <button onClick={onClickButtonDec} className={u.dec}>dec</button>
             </div>
+            <div>
+                <button>set</button>
+            </div>
         </div>
     );
 };
