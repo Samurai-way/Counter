@@ -1,4 +1,4 @@
-import React, {ButtonHTMLAttributes, useState} from 'react';
+import React from 'react';
 import b from './Buttons.module.css'
 
 type PropsType = {
@@ -14,9 +14,6 @@ export const Button = (props: PropsType) => {
     const onClickButtonHundler =()=>{
         props.onClick()
     }
-
-
-
 
     return (
         <div>

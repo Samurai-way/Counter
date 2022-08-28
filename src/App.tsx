@@ -2,11 +2,16 @@ import React, {useEffect, useState} from 'react';
 import w from './App.module.css'
 import {UniversalButton} from "./button/UniversalButton";
 import {Value} from "./value/value";
+import {Button} from "./button/Button";
 
 
 function App() {
 
     let [value, setValue]=useState(0)
+
+    const onClick = ()=>{
+        alert('ky')
+    }
 
     return (
         <div className={w.wrapper}>
@@ -28,10 +33,10 @@ function App() {
                 </div>
                 <div className={w.change_button_wrapper}>
                     <div className={w.change_button}>
-                        <UniversalButton name={'set'}
-                            value={value}
-                            setValue={setValue}
-                        />
+                       <Button name={'save'}
+                               value={value}
+                               onClick={onClick}
+                       />
                     </div>
                 </div>
             </div>
