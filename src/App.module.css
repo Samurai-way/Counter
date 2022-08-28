@@ -2,5 +2,40 @@
     width: 1440px;
     height: 700px;
     background-color: gray;
+    /*margin: 0 auto;*/
+}
+
+.counter_wrapper{
+    background-color: darkred;
+    border: 3px solid black;
+    width: 300px;
+    height: 200px;
+    margin: 100px 600px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.counter{
+    width: 270px;
+    background-color: lightseagreen;
+    height: 110px;
+    margin: 10px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.value{
+    font-size: 30px;
+    width: 15px;
     margin: 0 auto;
+    color: white;
+}
+
+.button_wrapper{
+    background-color: lightseagreen;
+    height: 55px;
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
 }
