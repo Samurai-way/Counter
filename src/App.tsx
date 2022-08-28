@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import w from './App.module.css'
 import {UniversalButton} from "./button/UniversalButton";
 import {Value} from "./value/value";
@@ -29,7 +29,14 @@ function App() {
             </div>
             <div className={w.change_wrapper}>
                 <div className={w.change_counter}>
-                    ///
+                    <div className={w.one_input}>
+                       Max value :
+                        <input className={w.max_input} type={'number'}/>
+                    </div>
+                    <div className={w.two_input}>
+                        Start value :
+                        <input className={w.min_input} type={'number'}/>
+                    </div>
                 </div>
                 <div className={w.change_button_wrapper}>
                     <div className={w.change_button}>

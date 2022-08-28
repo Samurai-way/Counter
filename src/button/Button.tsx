@@ -5,7 +5,6 @@ type PropsType = {
     name: string
     onClick: ()=>void
     value: number
-
 }
 
 

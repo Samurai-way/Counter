@@ -17,6 +17,8 @@ export const UniversalButton = (props: UniversalButtonPropsType) => {
         props.setValue(0)
     }
 
+
+
     return (
         <div className={b.wrapper}>
             <div className={b.inc}>

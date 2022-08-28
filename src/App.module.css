@@ -1,11 +1,11 @@
-.wrapper{
+.wrapper {
     width: 1440px;
     height: 700px;
     background-color: gray;
     /*margin: 0 auto;*/
 }
 
-.counter_wrapper{
+.counter_wrapper {
     background-color: darkred;
     border: 3px solid black;
     width: 300px;
@@ -15,7 +15,7 @@
     border-radius: 20px;
 }
 
-.counter{
+.counter {
     width: 270px;
     background-color: lightseagreen;
     height: 110px;
@@ -24,14 +24,14 @@
     border-radius: 10px;
 }
 
-.value{
+.value {
     font-size: 30px;
     width: 15px;
     margin: 0 auto;
     color: white;
 }
 
-.button_wrapper{
+.button_wrapper {
     background-color: lightseagreen;
     height: 55px;
     margin-top: 50px;
@@ -42,7 +42,7 @@
 
 /**                             Второе табло, для изменений             */
 
-.change_wrapper{
+.change_wrapper {
     background-color: darkred;
     border: 3px solid black;
     width: 300px;
@@ -52,7 +52,7 @@
     border-radius: 20px;
 }
 
-.change_counter{
+.change_counter {
     width: 270px;
     background-color: lightseagreen;
     height: 110px;
@@ -60,7 +60,8 @@
     border: 2px solid black;
     border-radius: 10px;
 }
-.change_button_wrapper{
+
+.change_button_wrapper {
     background-color: lightseagreen;
     height: 55px;
     width: 280px;
@@ -69,11 +70,34 @@
     border-radius: 10px;
     display: flex;
 }
-.change_button{
+
+.change_button {
     background-color: lightseagreen;
-    height: 55px;
-    margin-top: 50px;
-    border: 2px solid black;
+    margin: 15px 100px;
     border-radius: 10px;
     display: flex;
+}
+
+.one_input {
+    font-size: 20px;
+    font-family: "Berlin Sans FB";
+    margin: 20px 10px;
+}
+
+.two_input {
+    font-size: 20px;
+    font-family: "Berlin Sans FB";
+    margin: 20px 10px;
+}
+
+.max_input {
+    border-radius: 5px;
+    margin-left: 45px;
+    width: 100px;
+}
+
+.min_input {
+    border-radius: 5px;
+    margin-left: 40px;
+    width: 100px;
 }
