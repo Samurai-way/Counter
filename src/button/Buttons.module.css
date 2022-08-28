@@ -1,0 +1,20 @@
+.wrapper{
+    display: flex;
+}
+.inc{
+    /*border: 2px solid black;*/
+    margin-top: 15px;
+    margin-left: 60px;
+
+}
+.dec{
+    /*border: 2px solid black;*/
+    margin-top: 15px;
+    margin-left: 60px
+}
+.small{
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: cyan;
+    color: crimson;
+}

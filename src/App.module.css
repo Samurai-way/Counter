@@ -39,3 +39,41 @@
     border-radius: 10px;
     display: flex;
 }
+
+/**                             Второе табло, для изменений             */
+
+.change_wrapper{
+    background-color: darkred;
+    border: 3px solid black;
+    width: 300px;
+    height: 200px;
+    margin: -305px 10px 10px 240px;
+    display: block;
+    border-radius: 20px;
+}
+
+.change_counter{
+    width: 270px;
+    background-color: lightseagreen;
+    height: 110px;
+    margin: 10px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.change_button_wrapper{
+    background-color: lightseagreen;
+    height: 55px;
+    width: 280px;
+    margin: 10px 10px 10px 8px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+}
+.change_button{
+    background-color: lightseagreen;
+    height: 55px;
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+}

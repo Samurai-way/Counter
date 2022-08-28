@@ -16,13 +16,25 @@ function App() {
                         <Value value={value}/>
                     </div>
                    <div className={w.button_wrapper}>
-                       <UniversalButton setValue={setValue}
+                       <UniversalButton name={'inc'} setValue={setValue}
                                         value={value}
                        />
                    </div>
                 </div>
             </div>
-
+            <div className={w.change_wrapper}>
+                <div className={w.change_counter}>
+                    ///
+                </div>
+                <div className={w.change_button_wrapper}>
+                    <div className={w.change_button}>
+                        <UniversalButton name={'set'}
+                            value={value}
+                            setValue={setValue}
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

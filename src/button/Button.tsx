@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {ButtonHTMLAttributes, useState} from 'react';
+import b from './Buttons.module.css'
 
 type PropsType = {
     name: string
     onClick: ()=>void
     value: number
+
 }
+
 
 export const Button = (props: PropsType) => {
 
@@ -12,9 +15,13 @@ export const Button = (props: PropsType) => {
         props.onClick()
     }
 
+
+
+
     return (
         <div>
-            <button onClick={onClickButtonHundler}>{props.name}</button>
+            <button className={b.small}
+                    onClick={onClickButtonHundler}>{props.name}</button>
         </div>
     );
 };
