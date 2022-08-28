@@ -3,14 +3,14 @@ import b from './Buttons.module.css'
 
 type PropsType = {
     name: string
-    onClick: ()=>void
+    onClick: () => void
     value: number
 }
 
 
 export const Button = (props: PropsType) => {
 
-    const onClickButtonHundler =()=>{
+    const onClickButtonHundler = () => {
         props.onClick()
     }
 
