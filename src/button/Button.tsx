@@ -5,6 +5,7 @@ type PropsType = {
     name: string
     onClick: () => void
     value: number
+    disabled?: boolean
 }
 
 
@@ -14,9 +15,14 @@ export const Button = (props: PropsType) => {
         props.onClick()
     }
 
+
+
+
     return (
         <div>
-            <button className={b.small}
+            <button
+                    disabled={props.disabled}
+                    className={b.small}
                     onClick={onClickButtonHundler}>{props.name}</button>
         </div>
     );

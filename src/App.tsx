@@ -11,10 +11,7 @@ function App() {
     let [error, setError] = useState(true)
     let [max, setMax] = useState(0)
     let [start, setStart]=useState(0)
-
-
-
-
+    let [disabled, setDisabled]=useState(false)
 
     const startValue = () => {
         localStorage.setItem('saveValue', JSON.stringify(start))
@@ -39,6 +36,14 @@ function App() {
         setStart(Number(e.target.value))
     }
 
+    // const disabledHendler = () => {
+    //     if(max){
+    //         return true
+    //     } else {
+    //         return  false
+    //     }
+    // }
+
     // const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
     //     // debugger
     //     const inp = e.currentTarget.value
@@ -60,6 +65,8 @@ function App() {
                     <div className={w.button_wrapper}>
                         <UniversalButton name={'inc'} setValue={setValue}
                                          value={value}
+                                         disabled={disabled}
+                                         max={max}
                         />
                     </div>
                 </div>
@@ -80,6 +87,7 @@ function App() {
                         <Button name={'save'}
                                 value={value}
                                 onClick={onClick}
+
                         />
                     </div>
                 </div>
