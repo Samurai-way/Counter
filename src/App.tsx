@@ -9,7 +9,7 @@ function App() {
 
     let [value, setValue] = useState(0)
     let [error, setError] = useState(true)
-    // let [max, setMax] = useState(0)
+    let [max, setMax] = useState(0)
     let [start, setStart]=useState(0)
 
 
@@ -18,6 +18,7 @@ function App() {
 
     const startValue = () => {
         localStorage.setItem('saveValue', JSON.stringify(start))
+        localStorage.setItem('maxValue', JSON.stringify(max))
         let str = localStorage.getItem('saveValue')
         if(str){
             let newValue = JSON.parse(str)
@@ -30,9 +31,9 @@ function App() {
         startValue()
     }
 
-    // const onChangeSaveHendler = (e: ChangeEvent<HTMLInputElement>) => {
-    //     setMax(Number(e.target.value))
-    // }
+    const onChangeSaveHendler = (e: ChangeEvent<HTMLInputElement>) => {
+        setMax(Number(e.target.value))
+    }
 
     const onChangeStartHendler = (e: ChangeEvent<HTMLInputElement>) => {
         setStart(Number(e.target.value))
@@ -67,7 +68,7 @@ function App() {
                 <div className={w.change_counter}>
                     <div className={w.one_input}>
                         Max value :
-                        <input className={w.max_input} type={'number'}/>
+                        <input value={max} onChange={onChangeSaveHendler} className={w.max_input} type={'number'}/>
                     </div>
                     <div className={w.two_input}>
                         Start value :
