@@ -9,17 +9,30 @@ function App() {
 
     let [value, setValue] = useState(0)
     let [error, setError] = useState(true)
+    let [save, setSave] = useState(0)
+
+    const startValue = () => {
+        localStorage.setItem('saveValue', JSON.stringify(save))
+    }
 
     const onClick = () => {
-        alert('ky')
+        startValue()
     }
 
-    const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
-        // debugger
-        const inp = e.currentTarget.value
-
-        if(inp) setError(false)
+    const onChangeSaveHendler = (e: ChangeEvent<HTMLInputElement>) => {
+        setSave(Number(e.target.value))
     }
+
+    const onChangeStartHendler = () => {
+
+    }
+
+    // const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    //     // debugger
+    //     const inp = e.currentTarget.value
+    //
+    //     if(inp) setError(!error)
+    // }
 
 
     return (
@@ -43,7 +56,7 @@ function App() {
                 <div className={w.change_counter}>
                     <div className={w.one_input}>
                         Max value :
-                        <input onChange={onChangeInput} className={w.max_input} type={'number'}/>
+                        <input value={save} onChange={onChangeSaveHendler} className={w.max_input} type={'number'}/>
                     </div>
                     <div className={w.two_input}>
                         Start value :

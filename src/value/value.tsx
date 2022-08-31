@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import v from '../App.module.css';
 
 type ValuePropsType = {
@@ -8,6 +8,9 @@ type ValuePropsType = {
 }
 
 export const Value = (props: ValuePropsType) => {
+
+
+
     return (
         <div className={v.value}>
             <p>
