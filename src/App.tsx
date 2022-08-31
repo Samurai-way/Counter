@@ -9,22 +9,33 @@ function App() {
 
     let [value, setValue] = useState(0)
     let [error, setError] = useState(true)
-    let [save, setSave] = useState(0)
+    // let [max, setMax] = useState(0)
+    let [start, setStart]=useState(0)
+
+
+
+
 
     const startValue = () => {
-        localStorage.setItem('saveValue', JSON.stringify(save))
+        localStorage.setItem('saveValue', JSON.stringify(start))
+        let str = localStorage.getItem('saveValue')
+        if(str){
+            let newValue = JSON.parse(str)
+            setValue(newValue)
+        }
+
     }
 
     const onClick = () => {
         startValue()
     }
 
-    const onChangeSaveHendler = (e: ChangeEvent<HTMLInputElement>) => {
-        setSave(Number(e.target.value))
-    }
+    // const onChangeSaveHendler = (e: ChangeEvent<HTMLInputElement>) => {
+    //     setMax(Number(e.target.value))
+    // }
 
-    const onChangeStartHendler = () => {
-
+    const onChangeStartHendler = (e: ChangeEvent<HTMLInputElement>) => {
+        setStart(Number(e.target.value))
     }
 
     // const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -56,11 +67,11 @@ function App() {
                 <div className={w.change_counter}>
                     <div className={w.one_input}>
                         Max value :
-                        <input value={save} onChange={onChangeSaveHendler} className={w.max_input} type={'number'}/>
+                        <input className={w.max_input} type={'number'}/>
                     </div>
                     <div className={w.two_input}>
                         Start value :
-                        <input className={w.min_input} type={'number'}/>
+                        <input value={start} onChange={onChangeStartHendler} className={w.min_input} type={'number'}/>
                     </div>
                 </div>
                 <div className={w.change_button_wrapper}>
