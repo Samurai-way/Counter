@@ -1,7 +1,7 @@
 import React, {ChangeEvent, useState} from 'react';
 import w from './App.module.css'
 import {UniversalButton} from "./button/UniversalButton";
-import {Value} from "./value/value";
+import {Value} from "./value/Value";
 import {Button} from "./button/Button";
 
 
