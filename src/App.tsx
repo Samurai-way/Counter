@@ -21,7 +21,7 @@ function App() {
             let newValue = JSON.parse(str)
             setValue(newValue)
         }
-
+        // console.log('')
     }
 
     const onClick = () => {
