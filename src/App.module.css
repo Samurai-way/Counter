@@ -26,15 +26,16 @@
 
 .value {
     font-size: 30px;
-    width: 15px;
-    margin: 0 auto;
+    margin: 30px 60px;
     color: white;
+    display: block;
+    margin-bottom: -70px;
 }
 
 .button_wrapper {
     background-color: lightseagreen;
     height: 55px;
-    margin-top: 50px;
+    margin-top: 120px;
     border: 2px solid black;
     border-radius: 10px;
     display: flex;
@@ -102,10 +103,11 @@
     width: 100px;
 }
 
-/*.error{*/
-/*    border-radius: 5px;*/
-/*    margin-left: 45px;*/
-/*    width: 100px;*/
-/*    border: 2px solid red;*/
-/*    background-color: lightcoral;*/
-/*}*/
+.error{
+    width: 300px;
+    /*border: 1px solid black;*/
+    margin-left: -75px;
+    text-align: justify;
+    /*display: inline-block;*/
+    font-size: 20px;
+}

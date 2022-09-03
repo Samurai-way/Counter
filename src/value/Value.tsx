@@ -5,17 +5,36 @@ type ValuePropsType = {
     value: number
     error: boolean
     setError: (error: boolean) => void
+    max: number
+    start:number
+}
+
+const inline = {
+    display: 'inline-block'
+}
+
+const none = {
+    display: 'none'
+}
+
+const value = {
+    color: 'red'
 }
 
 export const Value = (props: ValuePropsType) => {
+    // console.log(props.disabled)
+    const colorValue = !props.max ? value : undefined
+    // const noneBlock = props.max > 0 || props.start > 0 ? none : undefined
+    // const inlineBlock = props.max > 0 || props.start > 0 ? inline : undefined
 
 
     return (
         <div className={v.value}>
-            <p className={v.press}>
-                {props.value}
-                {props.error}
-            </p>
+              <div style={colorValue}>{props.value}</div>
+              {/*<div className={v.error}>{props.error}*/}
+              {/*  Incorrect value*/}
+              {/*</div>*/}
         </div>
+
     );
 };

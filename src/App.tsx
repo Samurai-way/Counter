@@ -14,6 +14,7 @@ const startValueStyle = {
     backgroundColor: 'lightcoral'
 }
 
+const MyComponent = React.memo(Button)
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
     }
 
 
+
     const onChangeSaveHendler = (e: ChangeEvent<HTMLInputElement>) => {
         setMax(Number(e.target.value))
         // console.log(e.target.value)
@@ -55,14 +57,19 @@ function App() {
     const maxValueChange = max < 0 ? maxValueStyle : undefined
     const startValueChange = start < 0 ? startValueStyle : undefined
 
+
+
     return (
         <div className={w.wrapper}>
             <div className={w.counter_wrapper}>
                 <div className={w.counter}>
                     <div className={w.value}>
-                        <Value value={value}
+                        <Value
+                               value={value}
                                error={error}
                                setError={setError}
+                               max={max}
+                               start={start}
                         />
                 </div>
                     <div className={w.button_wrapper}>
@@ -98,9 +105,10 @@ function App() {
                 </div>
                 <div className={w.change_button_wrapper}>
                     <div className={w.change_button}>
-                        <Button name={'save'}
+                        <MyComponent name={'save'}
                                 value={value}
                                 onClick={onClick}
+                                disabled={disabled}
                         />
                     </div>
                 </div>

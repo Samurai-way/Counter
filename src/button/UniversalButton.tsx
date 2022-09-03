@@ -22,6 +22,7 @@ export const UniversalButton = (props: UniversalButtonPropsType) => {
     const isValueEqual = props.max === props.value
 
 
+
     return (
         <div className={b.wrapper}>
             <div className={b.inc}>
