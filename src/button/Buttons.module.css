@@ -2,13 +2,11 @@
     display: flex;
 }
 .inc{
-    /*border: 2px solid black;*/
     margin-top: 15px;
     margin-left: 60px;
 
 }
 .dec{
-    /*border: 2px solid black;*/
     margin-top: 15px;
     margin-left: 60px
 }

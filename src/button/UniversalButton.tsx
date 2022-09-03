@@ -25,10 +25,16 @@ export const UniversalButton = (props: UniversalButtonPropsType) => {
     return (
         <div className={b.wrapper}>
             <div className={b.inc}>
-                <Button disabled={props.disabled || isValueEqual} name={'inc'} value={props.value} onClick={inc}/>
+                <Button disabled={props.disabled || isValueEqual} name={'inc'}
+                        value={props.value}
+                        onClick={inc}
+                />
             </div>
             <div className={b.dec}>
-                <Button name={'dec'} value={props.value} onClick={dec}/>
+                <Button name={'dec'}
+                        value={props.value}
+                        onClick={dec}
+                />
             </div>
         </div>
     );

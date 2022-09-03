@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import v from '../App.module.css';
 
 type ValuePropsType = {
@@ -10,13 +10,11 @@ type ValuePropsType = {
 export const Value = (props: ValuePropsType) => {
 
 
-
     return (
         <div className={v.value}>
-            <p>
-                    {props.error ?
-                    props.value :
-                    'Enter values and press set'}
+            <p className={v.press}>
+                {props.value}
+                {props.error}
             </p>
         </div>
     );
