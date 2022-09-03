@@ -10,7 +10,6 @@ type PropsType = {
 
 
 export const Button = (props: PropsType) => {
-    console.log('props.disabled', props.disabled)
     const onClickButtonHundler = () => {
         props.onClick()
     }

@@ -103,11 +103,12 @@
     width: 100px;
 }
 
-.error{
+.items{
     width: 300px;
     /*border: 1px solid black;*/
-    margin-left: -75px;
+    margin: 45px -60px;
     text-align: justify;
-    /*display: inline-block;*/
+    display: block;
     font-size: 20px;
+
 }
