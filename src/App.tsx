@@ -41,7 +41,7 @@ function App() {
 
 
 
-    const onChangeSaveHendler = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeMaxHendler = (e: ChangeEvent<HTMLInputElement>) => {
         setMax(Number(e.target.value))
         // console.log(e.target.value)
 
@@ -49,12 +49,19 @@ function App() {
 
 
     const onChangeStartHendler = (e: ChangeEvent<HTMLInputElement>) => {
+        if(Number(e.target.value) < 0) {
+            setDisabled(true)
+        } else if(Number(e.target.value) >= 0) {
+            setDisabled(false)
+        }
+
         setStart(Number(e.target.value))
+
     }
 
 
 
-    const maxValueChange = max < 0 ? maxValueStyle : undefined
+    const maxValueChange = max < 0  || start < 0 ? maxValueStyle : undefined
     const startValueChange = start < 0 ? startValueStyle : undefined
 
 
@@ -87,7 +94,7 @@ function App() {
                         Max value :
                         <input
                                style={maxValueChange}
-                               value={max} onChange={onChangeSaveHendler}
+                               value={max} onChange={onChangeMaxHendler}
                                className={w.max_input}
                                type={'number'}
                         />
