@@ -42,10 +42,9 @@ function App() {
 
 
     const onClick = () => {
-        console.log('нажата')
+        // console.log('нажата')
         startValue()
         setItems('')
-        setValue(0)
     }
 
     const onChangeMaxHendler = (e: ChangeEvent<HTMLInputElement>) => {
